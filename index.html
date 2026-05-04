@@ -1,224 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2M6CBTB720"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2M6CBTB720"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2M6CBTB720');
+  </script>
 
-  gtag('config', 'G-2M6CBTB720');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Play Unblocked Games Online – Sonic, Moto X3M, Among Us & More</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play over 50 unblocked games online. Roblox, Among Us, 1v1 LOL, Minecraft, and more. Access from school networks or restricted connections.">
+  <meta name="keywords" content="unblocked games, online games, free games, school games">
+  <meta property="og:title" content="Unblocked Games - Play Online">
+  <meta property="og:description" content="Access 50+ unblocked games instantly. Works on restricted networks.">
+  <meta property="og:type" content="website">
+  
+  <title>Unblocked Games - Play Online</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0f172a;
-  color: #f1f5f9;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-}
+    :root {
+      --dark-bg: #0a0e27;
+      --card-bg: #151d3d;
+      --card-border: #1e2d5a;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --accent: #10b981;
+      --accent-light: #34d399;
+      --hover-bg: #1e2d5a;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
 
-header h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-header p {
-  max-width: 700px;
-  margin: auto;
-  color: #cbd5e1;
-  line-height: 1.6;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-.games-container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
+    /* Header */
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1e2d5a 0%, #0a0e27 100%);
+      border-bottom: 1px solid var(--card-border);
+      position: relative;
+      overflow: hidden;
+    }
 
-.game-card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 20px;
-  transition: 0.3s ease;
-  text-decoration: none;
-  color: #f1f5f9;
-}
+    header::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
+    }
 
-.game-card:hover {
-  transform: translateY(-5px);
-  background: #334155;
-}
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
 
-.game-card h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
+    header h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
 
-.game-card p {
-  font-size: 14px;
-  color: #cbd5e1;
-  line-height: 1.5;
-}
+    header p {
+      max-width: 600px;
+      margin: 0 auto 8px;
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-.play-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 14px;
-  background: #22c55e;
-  color: #0f172a;
-  border-radius: 6px;
-  font-weight: bold;
-}
+    .subtitle {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
 
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 13px;
-  color: #94a3b8;
-}
-</style>
+    /* Games Grid */
+    .games-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 24px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .game-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .game-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .game-card:hover {
+      border-color: var(--accent);
+      background: var(--hover-bg);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg), 0 0 20px rgba(16, 185, 129, 0.15);
+    }
+
+    .game-card:hover::before {
+      left: 100%;
+    }
+
+    .game-category {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      padding: 4px 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .game-card h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 0;
+      color: var(--text-primary);
+    }
+
+    .game-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .play-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: #0a0e27;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      align-self: flex-start;
+      text-decoration: none;
+    }
+
+    .play-btn:hover {
+      background: var(--accent-light);
+      transform: translateX(2px);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .play-btn:active {
+      transform: translateX(0);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid var(--card-border);
+      background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.05));
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 15px;
+      }
+
+      .games-container {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+      }
+
+      .game-card {
+        padding: 20px;
+      }
+
+      .game-card h2 {
+        font-size: 20px;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --dark-bg: #f8fafc;
+        --card-bg: #f1f5f9;
+        --card-border: #e2e8f0;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --accent: #059669;
+        --accent-light: #10b981;
+        --hover-bg: #e2e8f0;
+      }
+
+      header {
+        background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+      }
+
+      .game-category {
+        background: rgba(5, 150, 105, 0.1);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <p class="subtitle">Gaming Platform</p>
+    <h1>Unblocked Games</h1>
+    <p>Access a curated selection of games that work on restricted networks. Play instantly without downloads or installations.</p>
+  </header>
 
-<header>
-  <h1>Play Unblocked Games Online</h1>
-  <p>
-    Looking for games that actually work on school WiFi or restricted networks?
-    Here are some solid picks. There are so many more games on the website also.
-  </p>
-</header>
+  <div class="games-container">
+    <a class="game-card" href="https://classroom20x.com/play/roblox" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Sandbox</span>
+      <h2>Roblox</h2>
+      <p>Create and play user-generated experiences across countless genres. From simulation games to competitive adventures, discover new worlds with a diverse global community.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<div class="games-container">
+    <a class="game-card" href="https://jack-inthebox-menu.com/among-us/" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Multiplayer</span>
+      <h2>Among Us</h2>
+      <p>Work with other crew members to complete tasks while identifying imposters in this social deduction game. Strategy, communication, and intuition determine victory.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://classroom20x.com/play/roblox" target="_blank">
-  <h2>Roblox</h2>
-  <p>
-    Endless games, wild worlds and total chaos. Jump into anything from racing to survival.
-    You never play the same game twice.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://classroom20x.com/play/1v1-lol" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Competitive</span>
+      <h2>1v1 LOL</h2>
+      <p>Engage in fast-paced arena battles requiring building mechanics and precision aim. Test your reaction time and strategy in competitive single or team matches.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-  <a class="game-card" href="https://jack-inthebox-menu.com/among-us/" target="_blank">
-    <h2>Among Us Unblocked</h2>
-    <p>
-      Crewmate or impostor? You already know the vibe. Quick matches, simple controls,
-      and surprisingly tense gameplay.
-    </p>
-    <span class="play-btn">Play Now</span>
-  </a>
+    <a class="game-card" href="https://classroom20x.com/play/retro-bowl" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Sports</span>
+      <h2>Retro Bowl</h2>
+      <p>Manage and lead your football team through a complete season. Master play-calling, team management, and strategy to capture championship victories.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-  <a class="game-card" href="https://classroom20x.com/play/1v1-lol" target="_blank">
-    <h2>1v1 LOL</h2>
-    <p>
-      Build, shoot, repeat. Fast arena battles that test reflexes and aim.
-      If you like competitive games, this one keeps you locked in.
-    </p>
-    <span class="play-btn">Play Now</span>
-  </a>
+    <a class="game-card" href="https://jack-inthebox-menu.com/polytrack/" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Racing</span>
+      <h2>PolyTrack</h2>
+      <p>Experience minimalist high-speed racing with responsive controls. Navigate challenging low-polygon tracks where precision and timing are essential to success.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-  <a class="game-card" href="https://classroom20x.com/play/retro-bowl" target="_blank">
-    <h2>Retro Bowl</h2>
-    <p>
-      Old-school football with modern strategy. Manage your team,
-      call the plays, and chase the championship.
-    </p>
-    <span class="play-btn">Play Now</span>
-  </a>
+    <a class="game-card" href="https://jack-inthebox-menu.com/fortnite/" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Battle Royale</span>
+      <h2>Fortnite Browser Battle</h2>
+      <p>Drop into a competitive battle royale environment. Scavenge for equipment, manage resources, and outlast opponents in a shrinking safe zone.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://jack-inthebox-menu.com/polytrack/" target="_blank">
-  <h2>PolyTrack</h2>
-  <p>
-    High speed racing on clean low poly tracks. Tight corners, sharp reflexes, and smooth handling.
-    If you like skill based driving that rewards precision instead of luck, this one delivers.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://snowrider.pro/game/snowrider3dpro.html" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Action</span>
+      <h2>Snow Rider 3D Pro</h2>
+      <p>Navigate mountain slopes while avoiding trees and natural obstacles. Responsive controls and fluid gameplay create an engaging endless runner experience.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://jack-inthebox-menu.com/fortnite/" target="_blank">
-  <h2>Fortnite Browser Battle</h2>
-  <p>
-    Drop in, gear up, and survive the chaos. Search for weapons, stay inside the safe zone,
-    and outlast every opponent in this fast-paced browser battle experience.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://snowrider.pro/game/subway-surfers.html" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Runner</span>
+      <h2>Subway Surfers</h2>
+      <p>Navigate subway tracks while evading authorities and collecting rewards. Combine fast reflexes with timing to achieve high scores in this endless runner.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://snowrider.pro/game/snowrider3dpro.html" target="_blank">
-  <h2>Snow Rider 3D Pro</h2>
-  <p>
-    Speed down icy slopes, dodge trees and obstacles, and survive as long as possible.
-    Smooth controls, endless action, and that addictive one more run feeling.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://jack-inthebox-menu.com/minecraft-classic-unblocked/" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Sandbox</span>
+      <h2>Minecraft Classic</h2>
+      <p>Build and explore freely without resource limitations. Pure creative expression using a simple block-based system for unlimited architectural possibilities.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://snowrider.pro/game/subway-surfers.html" target="_blank">
-  <h2>Subway Surfers</h2>
-  <p>
-    Dash through subway tracks, dodge trains, and grab coins while escaping the inspector.
-    Fast reflexes, colorful visuals, and nonstop runner energy.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://classroom20x.com/play/cookie-clicker-2" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Idle</span>
+      <h2>Cookie Clicker 2</h2>
+      <p>Build a passive income empire through strategic upgrades and automation. Watch your production scale exponentially as you unlock new facilities and technologies.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://jack-inthebox-menu.com/minecraft-classic-unblocked/" target="_blank">
-  <h2>Minecraft Classic</h2>
-  <p>
-    Pure creativity, no limits, no rules. Build anything you want with simple blocks
-    and lose hours doing absolutely nothing... and everything.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://classroom20x.com/play/minecraft-case-simulator" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Simulation</span>
+      <h2>Minecraft Case Simulator</h2>
+      <p>Open cases and pursue rare items through systematic gameplay. Risk-reward mechanics create engaging progression and collection mechanics.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
 
-<a class="game-card" href="https://classroom20x.com/play/cookie-clicker-2" target="_blank">
-  <h2>Cookie Clicker 2</h2>
-  <p>
-    Click cookies, build upgrades, and watch your cookie empire grow.
-    A classic idle game where every click brings you closer to infinite cookies.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
+    <a class="game-card" href="https://classroom20x.com/play/armed-forces-io" target="_blank" rel="noopener noreferrer">
+      <span class="game-category">Multiplayer</span>
+      <h2>Armed Forces IO</h2>
+      <p>Participate in tactical multiplayer combat with realistic weapon mechanics. Team coordination and individual skill determine success in objective-based battles.</p>
+      <span class="play-btn">Play Now</span>
+    </a>
+  </div>
 
-<a class="game-card" href="https://classroom20x.com/play/minecraft-case-simulator" target="_blank">
-  <h2>Minecraft Case Simulator</h2>
-  <p>
-    Open cases, chase rare items and test your luck. Every click could be trash…
-    or something insanely rare.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
-
-<a class="game-card" href="https://classroom20x.com/play/armed-forces-io" target="_blank">
-  <h2>Armed Forces IO</h2>
-  <p>
-    Jump into intense multiplayer battles with realistic weapons and tactical gameplay.
-    Fight other players in fast-paced combat arenas.
-  </p>
-  <span class="play-btn">Play Now</span>
-</a>
-
-</div>
-
-<footer>
-  🚀 Click any game below to instantly launch it on a new page and start playing.
-  Have fun. Don't get caught!
-</footer>
-
+  <footer>
+    <p>Click any game to launch instantly in a new browser tab</p>
+    <div class="footer-note">All games work on restricted networks and require no downloads</div>
+  </footer>
 </body>
 </html>
